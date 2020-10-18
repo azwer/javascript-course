@@ -1,0 +1,76 @@
+<html>
+
+<head>
+	
+	<style>
+	
+	#dialogCont {
+	
+		position: absolute;
+		left: 42%;
+		top: 30%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 305px;
+		background: #fff;
+		padding 10px;
+		border: 2px solid #ddd;
+		box-shadow: 5px 5px 10px 5px #ccc;
+		border-radius: 10px;
+		opacity: 1;
+
+	}
+
+			
+	.testOK{
+	padding: 1px;
+	font-family; arial;
+	font-size: 20px;
+	width: 150px;
+	box-shadow: 1px 1px 5px 1px #ccc;
+	}
+
+	#result {
+	
+		position: absolute;
+		left: 70%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 600px;
+		height:600px;
+		background: #fff;
+		border: 2px solid #ddd;
+		box-shadow: 5px 5px 10px 5px #ccc;
+		border-radius: 10px;
+		
+	}
+}
+	</style>
+	
+</head>
+<body>
+
+		<div id="dialogCont">
+			<input type="text" id="times">
+			<button class ="testOK" onclick="CustomAlert.aa();"> Click Me! </button>
+		</div>
+		<input id="result">
+		
+
+	<script>
+		CustomAlert = new function(){
+		document.getElementById('dialogCont');
+				
+			this.aa = function (){
+	
+			var numb = document.getElementById("times").value
+		
+			for ( i = 1; i<=20; i++ ) {
+
+			document.getElementById("result").value += "\n" + numb + " × " + i +  " " + "=" + " " + i * numb + "\n" ;
+	
+	}
+	}
+	}
+	</script>
+</body>
+</html>
